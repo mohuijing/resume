@@ -1,0 +1,176 @@
+<swiper style="height:{{height}}px">
+<!--1-->
+  <swiper-item>
+    <image src="../../img/psc.jpg"mode="widthFix" class="phone"></image>
+    <!-- 姓名 -->
+    <view class="cover-info">
+      <text class="cover-name">{{name}}</text>
+      <text class="cover-spell">{{spell}}</text>
+    </view>
+    <!-- 气泡 -->
+    <view class="big-circle"></view>
+    <view class="medium-circle"></view>
+    <view class="small-circle"></view>
+    <!-- 腰封 -->
+    <view class="cover-work">
+      <text class="cover-job">{{job}}</text>
+      <text class="cover-exp">{{exp}}</text>
+    </view>
+    <!-- 导航文字 -->
+    <view class="navigation">
+      我的简历
+      <image src="../../img/arrow-right.png" class="arrow-right"></image>
+    </view>
+  </swiper-item>
+  <!--2-->
+  <swiper-item>
+    <!-- 滚动区域控件-->
+    <scroll-view scroll-y="true" style="width:{{width}}px;height:{{height}}px">
+      <view class="resume">
+        <!-- 栏目 1-->
+        <view class="section">
+          <!--标题-->
+          <view class="section-info">
+            <!--序号-->
+            <view class="section-seq">1</view>
+            <!--文字-->
+            <text class="section-title">基本资料</text>
+          </view>
+          <!-- 主要内容 -->
+          <view class="column col-2">
+            <text class="info">姓名：{{name}}</text>
+            <text class="info">电话：{{tel}}</text>
+          </view>
+          <view class="column col-2">
+            <text class="info">性别：{{sex}}</text>
+            <text class="info">年龄：{{age}}</text>
+          </view>
+          <view class="column col-1">
+            <text class="info">邮箱：{{email}}</text>
+          </view>
+          <view class="column col-1">
+            <text class="info">地址:{{address}}</text>
+          </view>
+        </view>
+        <!-- 栏目 2-->
+        <view class="section">
+          <!-- 标题 -->
+          <view class="section-info">
+              <view class="section-seq">2</view>
+              <text class="section-title">主要技能</text>
+          </view>
+          <!-- 进度条 -->
+          <view class="skill" wx:for="{{skill}}" wx:key="item">
+            <text class="skill-name">{{item.name}}</text>
+            <progress class="progress" percent="{{item.percent}}" stroke-width="5"></progress>
+          </view>
+        </view>
+        <!-- 栏目 -->
+        <view class="section">
+          <!-- 标题 3-->
+          <view class="section-info">
+            <view class="section-seq">3</view>
+            <text class="section-title">教育经历</text>
+          </view>
+          <!-- 毕业院校 -->
+          <view class="education" wx:for="{{education}}" wx:key="item">
+            <view class="school">
+              <image src="../../img/icon_school.png" class="icon-school"></image>
+              <text>{{item.school}}</text>
+            </view>
+            <view class="row">
+              <view class="info">
+                <image src="../../img/icon_book.png" class="icon-book"></image>
+                <text>{{item.major}}</text>
+              </view>
+              <view class="info">
+                <image src="../../img/icon_calendar.png" class="icon-calendar"></image>
+                <text>{{item.year}}</text>
+              </view>
+            </view>
+            <rich-text class="desc">{{item.desc}}</rich-text>
+          </view>
+        </view>
+        <text class="page">1/4</text>
+      </view>
+    </scroll-view>
+  </swiper-item> 
+  <!--3-->
+  <swiper-item>
+    <!-- 滚动区域控件 -->
+      <scroll-view scroll-y="true" style="width:{{width}}px,height:{{height}}px">
+        <view class="resume">
+          <!-- 栏目 -->
+          <view class="section">
+            <!-- 标题标签 -->
+            <view class="section-info">
+              <view class="section-seq">4</view>
+              <text class="section-title">在校经历</text>
+            </view>
+        <view class="work" wx:for="{{work}}" wx:key="{{item}}">
+              <view class="department">
+                <image src="../../img/icon_company.png" class="icon_department"></image>
+                <text>{{item.department}}</text>
+              </view>
+              <view class="row">
+                <view class="info">
+                  <image src="../../img/icon_job.png" class="icon_job"></image>
+                  <text>{{item.job}}</text>
+                </view>
+                <view class="info">
+                  <image src="../../img/icon_calendar.png" class="icon-calendar"></image>
+                  <text>{{item.year}}</text>
+                </view>
+              </view>
+              <rich-text class="desc">{{item.desc}}</rich-text>
+            </view>
+          </view>
+          <text class="page">2/4</text>
+          </view>
+      </scroll-view>
+  </swiper-item>
+  <!--4-->
+  <swiper-item>
+    <!--滚动区域控件-->
+    <scroll-view scroll-y="true" style="width:{{width}}px,height:{{height}}px">
+      <view class="resume">
+        <!--栏目-->
+        <view class="section">
+          <!--标题标签-->
+          <view class="section-info">
+            <view class="section-seq">5</view>
+            <text class="section-title">项目经历</text>
+          </view>
+          <view class="project" wx:for="{{project}}" wx:key="{{item}}">
+            <view class="project-name">
+              <image src="../../img/icon_computer.png" class="icon_computer"></image>
+              <text>{{item.name}}</text>
+            </view>
+            <rich-text class="desc">{{item.desc}}</rich-text>
+          </view>
+        </view>
+        <text class="page" >3/4</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!--5-->
+  <swiper-item>
+    <!--滚动区域控件-->
+    <scroll-view scroll-y="true" style="width:{{width}}px,height:{{height}}px">
+      <view class="resume">
+        <!--栏目-->
+        <view class="section">
+          <!--标题标签-->
+          <view class="section-info">
+            <view class="section-seq">6</view>
+            <text class="section-title">个人评价</text>
+          </view>
+          <view class="introduction" wx:for="{{introduction}}"wx:key="{{item}}">
+            <rich-text class="desc">{{item.desc}}</rich-text>
+          </view>
+        </view>
+        <text class="page">4/4</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

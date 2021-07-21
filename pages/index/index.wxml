@@ -7,10 +7,7 @@
       <text class="cover-name">{{name}}</text>
       <text class="cover-spell">{{spell}}</text>
     </view>
-    <!-- 气泡 -->
-    <view class="big-circle"></view>
-    <view class="medium-circle"></view>
-    <view class="small-circle"></view>
+    
     <!-- 腰封 -->
     <view class="cover-work">
       <text class="cover-job">{{job}}</text>
